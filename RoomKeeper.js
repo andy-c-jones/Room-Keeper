@@ -34,10 +34,10 @@ function initAPIListeners() {
             populateUserlist();
         }
 		alert(user.username + " joined the room");
-		if(user.username == "Nirilil" || user.username == "Arthmael")
-		{
-			API.moderateSetRole(user, 4);
-		}
+		//if(user.username == "Nirilil" || user.username == "Arthmael")
+		//{
+		//	API.moderateSetRole(user, 4);
+		//}
     });
 
     API.addEventListener(API.USER_LEAVE, function (user) {
