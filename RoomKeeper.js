@@ -55,7 +55,7 @@ function displayUI() {
 function initUIListeners() {
     $("#aj-userlistbtn").on("click", function () {
         userList = !userList;
-        $(this).css("color", userList ? "#3FFF00" : "#ED1C24");
+        $(this).css("color", userList ? "#FFFFFF" : "#858585");
         $("#aj-userlist").css("visibility", userList ? ("visible") : ("hidden"));
         if (!userList) {
             $("#aj-userlist").empty();
@@ -67,7 +67,7 @@ function initUIListeners() {
 
     $("#AJ-wootbtn").on("click", function () {
         autowoot = !autowoot;
-        $(this).css("color", autowoot ? "#3FFF00" : "#ED1C24");
+        $(this).css("color", autowoot ? "#FFFFFF" : "#858585");
         if (autowoot) {
             $("#button-vote-positive").click();
         }
@@ -76,7 +76,7 @@ function initUIListeners() {
 
     $("#aj-hidevideobtn").on("click", function () {
         hideVideo = !hideVideo;
-        $(this).css("color", hideVideo ? "#3FFF00" : "#ED1C24");
+        $(this).css("color", hideVideo ? "#FFFFFF" : "#858585");
         $("#yt-frame").animate({
             "height": (hideVideo ? "0px" : "271px")
         }, {
@@ -92,7 +92,7 @@ function initUIListeners() {
 
     $("#AJ-autoqueuebtn").on("click", function () {
         autoqueue = !autoqueue;
-        $(this).css("color", autoqueue ? "#3FFF00" : "#ED1C24");
+        $(this).css("color", autoqueue ? "#FFFFFF" : "#858585");
         if (autoqueue && !isInQueue()) {
             joinQueueIfEmpty();
         }
