@@ -33,7 +33,7 @@ function initAPIListeners() {
         if (userList) {
             populateUserlist();
         }
-		alert(user.username + " joined the room");
+		API.sendChat(user.username)
 		//if(user.username == "Nirilil" || user.username == "Arthmael")
 		//{
 		//	API.moderateSetRole(user, 4);
@@ -44,6 +44,7 @@ function initAPIListeners() {
         if (userList) {
             populateUserlist();
         }
+		API.sendChat(user.username)
     });
 }
 
