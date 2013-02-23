@@ -138,7 +138,7 @@ function isInQueue() {
 function joinQueueIfEmpty() {
     if ($("#button-dj-play").css("display") === "block") {
         $("#button-dj-play").click();
-    } else if (API.getWaitList().length == 0) {
+    } else if (API.getWaitList().length === 0) {
         API.waitListJoin();
     }
 }
