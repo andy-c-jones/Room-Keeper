@@ -120,7 +120,7 @@ function djAdvanced(obj) {
     if (autowoot) {
         $("#button-vote-positive").click();
     }
-
+	queueUpdate();
     if (userList) {
         populateUserlist();
     }
@@ -142,6 +142,9 @@ function joinQueueIfEmpty() {
 	if (waitList.length < 2) {
         $("#button-dj-play").click();
     }
+	else{
+		$("#button-dj-quit").click();
+	}
 }
 
 
