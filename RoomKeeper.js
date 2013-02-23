@@ -25,6 +25,8 @@ function initAPIListeners() {
 		var score = API.getRoomScore();
 		if(score.positive < score.negative)
 		{
+			var djs = getDJs();
+			API.sendChat('It turns out that many people do not like this song. Sorry ' + djs[0].username + '. Trying picking something more popular next time.');
 			API.moderateForceSkip();
 		}
     });
