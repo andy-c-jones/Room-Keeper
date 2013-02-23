@@ -141,7 +141,7 @@ function joinQueueIfEmpty() {
         $("#button-dj-play").click();
     } else if (waitList.length === 0) {
 		API.sendChat('length =' + waitList.length);
-        API.waitListJoin();
+        //API.waitListJoin();
     }
 }
 
