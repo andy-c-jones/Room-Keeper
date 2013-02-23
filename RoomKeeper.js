@@ -136,11 +136,9 @@ function isInQueue() {
 }
 
 function joinQueueIfEmpty() {
-	var djs = API.getDJs();
     if ($("#button-dj-play").css("display") === "block") {
         $("#button-dj-play").click();
-    } else if (djs.length < 2) {
-		API.sendChat(djs.length);
+    } else if (API.getWaitList().length == 0) {
         API.waitListJoin();
     }
 }
