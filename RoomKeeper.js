@@ -49,7 +49,7 @@ function displayUI() {
   	+ cWoot + '">auto w00ting</p><p id="AJ-autoqueuebtn" style="color:' 
 		+ cQueue + '">auto-queue</p><p id="aj-hidevideobtn" style="color:' 
 		+ cHideVideo + '">hide video</p><p id="aj-userlistbtn" style="color:' 
-		+ cUserList + '">userlist</p><br />');
+		+ cUserList + '">userlist</p>');
 }
 
 function initUIListeners() {
@@ -232,7 +232,7 @@ function drawUserlistItem(color, username) {
 //INITILISATION
 $('#aj-userlist').remove();
 $('#aj-css').remove();
-$('#aj-js').remove();
+$('#roomkeeper-js').remove();
 
 var head = document.getElementsByTagName('head')[0];
 var script = document.createElement('script');
