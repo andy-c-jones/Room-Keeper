@@ -22,27 +22,16 @@ function initAPIListeners() {
             populateUserlist();
         }
 		
-		var score = API.getRoomScore();
-		if(score.positive < score.negative)
+		var mehToUserRatio = (score.negative / API.getUsers().length);
+		if(mehToUserRatio > parseFloat("0.09"))
 		{
+			$("#button-add-this").click();
 			var djs = API.getDJs();
 			API.sendChat('It turns out that many people do not like this song. Sorry ' + djs[0].username + '. Trying picking something more popular next time.');
 			API.moderateForceSkip();
 		}
-		
-		wootToUserPercentage = (score.positive / API.getUsers().length);
-		if(wootToUserPercentage > parseFloat("0.09"))
-		{
-			$("#button-add-this").click();
-		}
     });
 	
-	API.addEventListener(API.ROOM_SCORE_UPDATE, function (obj) {
-		if(obj.curates == API.getUsers().length)
-		{
-		   $("#button-add-this").click();
-		}
-	});
 
 			
     API.addEventListener(API.USER_JOIN, function (user) {
