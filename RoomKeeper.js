@@ -34,7 +34,7 @@ function initAPIListeners() {
             populateUserlist();
         }
 		
-		if(user == "Nirilil" || user == "Arthmael")
+		if(user.username == "Nirilil" || user.username == "Arthmael")
 		{
 			API.moderateSetRole(user, 4);
 		}
