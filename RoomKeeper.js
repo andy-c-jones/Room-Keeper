@@ -21,12 +21,23 @@ function initAPIListeners() {
         if (userList) {
             populateUserlist();
         }
+		
+		var score = API.getRoomScore();
+		if(score.positive < score.negative)
+		{
+			API.moderateForceSkip();
+		}
     });
 
     API.addEventListener(API.USER_JOIN, function (user) {
         if (userList) {
             populateUserlist();
         }
+		
+		if(user == "Nirilil" || user == "Arthmael")
+		{
+			API.moderateSetRole(user, 4);
+		}
     });
 
     API.addEventListener(API.USER_LEAVE, function (user) {
@@ -129,7 +140,7 @@ function isInQueue() {
 function joinQueueIfEmpty() {
     if ($("#button-dj-play").css("display") === "block") {
         $("#button-dj-play").click();
-    } else if (API.getDJs().length == 0) {
+    } else if (API.getDJs().length < 2) {
         API.waitListJoin();
     }
 }
