@@ -144,7 +144,7 @@ function populateUserlist() {
         if ($('#button-dj-waitlist-leave').css('display') === 'block' && ($.inArray(API.getDJs(), API.getSelf()) == -1)) {
             var spot = $('#button-dj-waitlist-view').attr('title').split('(')[1];
             spot = spot.substring(0, spot.indexOf(')'));
-            $('#aj-userlist').append('<h1 id="plugbot-queuespot"><span style="font-variant:small-caps">Waitlist:</span> ' + spot + '</h3><br />');
+            $('#aj-userlist').append('<h1 id="aj-queue"><span style="font-variant:small-caps">Waitlist:</span> ' + spot + '</h3><br />');
         }
     }
 
@@ -231,8 +231,8 @@ function drawUserlistItem(color, username) {
 
 //INITILISATION
 $('#aj-userlist').remove();
-$('#plugbot-css').remove();
-$('#plugbot-js').remove();
+$('#aj-css').remove();
+$('#aj-js').remove();
 
 var head = document.getElementsByTagName('head')[0];
 var script = document.createElement('script');
@@ -269,7 +269,7 @@ function readCookies() {
     onCookiesLoaded();
 }
 
-$('body').prepend('<style type="text/css" id="plugbot-css">#aj-ui { position: absolute; margin-left: 349px; }#aj-ui p { background-color: #0b0b0b; height: 32px; padding-top: 8px; padding-left: 8px; cursor: pointer; font-variant: small-caps; width: 84px; font-size: 15px; margin: 0; }#aj-ui h2 { background-color: #0b0b0b; height: 112px; width: 156px; margin: 0; color: #fff; font-size: 13px; font-variant: small-caps; padding: 8px 0 0 12px; border-top: 1px dotted #292929; }#aj-userlist { border: 6px solid rgba(10, 10, 10, 0.8); border-left: 0 !important; background-color: #000000; padding: 8px 0px 20px 0px; width: 12%; }#aj-userlist p { margin: 0; padding-top: 4px; text-indent: 24px; font-size: 10px; }#aj-userlist p:first-child { padding-top: 0px !important; }#plugbot-queuespot { color: #42A5DC; text-align: left; font-size: 15px; margin-left: 8px }');
+$('body').prepend('<style type="text/css" id="aj-css">#aj-ui { position: absolute; margin-left: 349px; }#aj-ui p { background-color: #0b0b0b; height: 32px; padding-top: 8px; padding-left: 8px; cursor: pointer; font-variant: small-caps; width: 84px; font-size: 15px; margin: 0; }#aj-ui h2 { background-color: #0b0b0b; height: 112px; width: 156px; margin: 0; color: #fff; font-size: 13px; font-variant: small-caps; padding: 8px 0 0 12px; border-top: 1px dotted #292929; }#aj-userlist { border: 6px solid rgba(10, 10, 10, 0.8); border-left: 0 !important; background-color: #000000; padding: 8px 0px 20px 0px; width: 12%; }#aj-userlist p { margin: 0; padding-top: 4px; text-indent: 24px; font-size: 10px; }#aj-userlist p:first-child { padding-top: 0px !important; }#aj-queue { color: #42A5DC; text-align: left; font-size: 15px; margin-left: 8px }');
 $('body').append('<div id="aj-userlist"></div>');
 
 function onCookiesLoaded() {
