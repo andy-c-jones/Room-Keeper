@@ -142,6 +142,9 @@ function joinQueueIfEmpty() {
 	if (waitList.length < 2) {
         $("#button-dj-play").click();
     }
+	if (waitList.length > 2) {
+        $("#button-dj-stop").click();
+    }
 }
 
 
