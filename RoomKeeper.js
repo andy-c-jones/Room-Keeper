@@ -49,7 +49,7 @@ function displayUI() {
   	+ cWoot + '">auto w00ting</p><p id="AJ-autoqueuebtn" style="color:' 
 		+ cQueue + '">auto-queue</p><p id="aj-hidevideobtn" style="color:' 
 		+ cHideVideo + '">hide video</p><p id="aj-userlistbtn" style="color:' 
-		+ cUserList + '">userlist</p>');
+		+ cUserList + '">userlist</p><br />');
 }
 
 function initUIListeners() {
