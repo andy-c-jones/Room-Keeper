@@ -23,9 +23,8 @@ function initAPIListeners() {
         }
 		
 		var mehToUserRatio = (score.negative / API.getUsers().length);
-		if(mehToUserRatio > parseFloat("0.09"))
+		if(mehToUserRatio > parseFloat("0.49"))
 		{
-			$("#button-add-this").click();
 			var djs = API.getDJs();
 			API.sendChat('It turns out that many people do not like this song. Sorry ' + djs[0].username + '. Trying picking something more popular next time.');
 			API.moderateForceSkip();
