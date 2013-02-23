@@ -36,10 +36,6 @@ function initAPIListeners() {
             populateUserlist();
         }
 		API.sendChat('Welcome ' + user.username + ', have an enjoyable stay! I am a bot. The room is automated, if you dont like a song then vote meh and if enough people agree then the song will be skipped');
-		//if(user.username == "Nirilil" || user.username == "Arthmael")
-		//{
-		//	API.moderateSetRole(user, 4);
-		//}
     });
 
     API.addEventListener(API.USER_LEAVE, function (user) {
@@ -140,9 +136,11 @@ function isInQueue() {
 }
 
 function joinQueueIfEmpty() {
+	var djs = API.getDJs();
     if ($("#button-dj-play").css("display") === "block") {
         $("#button-dj-play").click();
-    } else if (API.getDJs().length < 2) {
+    } else if (djs.length < 2) {
+		API.sendChat(djs.length);
         API.waitListJoin();
     }
 }
