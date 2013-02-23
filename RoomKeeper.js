@@ -33,7 +33,7 @@ function initAPIListeners() {
         if (userList) {
             populateUserlist();
         }
-		API.sendChat(user.username)
+		API.sendChat('Welcome ' + user.username + ', have an enjoyable stay! I am a bot. The room is automated, if you dont like a song then vote meh and if enough people agree then the song will be skipped');
 		//if(user.username == "Nirilil" || user.username == "Arthmael")
 		//{
 		//	API.moderateSetRole(user, 4);
@@ -44,7 +44,6 @@ function initAPIListeners() {
         if (userList) {
             populateUserlist();
         }
-		API.sendChat(user.username)
     });
 }
 
